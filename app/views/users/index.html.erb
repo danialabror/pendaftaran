@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <%# <style>
+          body{
+              background-image:url('/assets/profile-fd84345febb3d73a161fffbcbdcd209eeb49ebcb485c95212e67d344f58e25d9.svg') ;
+              background-size:80%;
+          }
+    </style> %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+            <div class="col-md-6">
+                  <div class="card mt-5 bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="card-body">
+                              <h4 class="card-title">Data Diri Siswa</h4>
+                              <%= form_tag({:controller => "penerimaans", :action => "storeBioSiswa"}) do |f| %>   
+                                    <div class="form-group">
+                                          <%= label_tag :nama_lengkap, "Nama Lengkap" %>   
+                                          <%= text_field_tag :nama_lengkap, "",class:'form-control' %>    
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :nama_panggil, "Nama panggilan" %>   
+                                        <%= text_field_tag :nama_panggil, "",class:'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :jk, "Jenis Kelamin" %>   
+                                        <%= select_tag :jk, options_for_select(['Perempuan', 'Laki-laki']),class:'form-control'  %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ttl, "Tempat, tanggal lahir" %>   
+                                        <%= text_field_tag :ttl, "",class:'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :agama, "Agama" %>   
+                                        <%= select_tag :agama, options_for_select(['islam', 'kristen', 'hindu', 'buddha']),class:'form-control'  %>
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :cita, "Cita-cita" %>   
+                                        <%= text_field_tag :cita, "",class:'form-control' %> 
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :hoby, "Hobby" %>   
+                                        <%= text_field_tag :hoby, "",class:'form-control' %> 
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :jml_saudara, "Jumlah Saudara" %>   
+                                        <%= number_field_tag :jml_saudara ,"",class:'form-control' %> 
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :berat, "berat" %>   
+                                        <%= number_field_tag :berat, "",class:'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                      <%= label_tag :tinggi, "tinggi" %>   
+                                      <%= number_field_tag :tinggi, "",class:'form-control' %>
+                                    </div> 
+
+                                    <div class="form-group">
+                                      <%= label_tag :goldar, "goldar" %>   
+                                      <%= text_field_tag :goldar, "",class:'form-control' %>
+                                    </div> 
+
+                                    <div class="form-group">
+                                    <%= label_tag :foto, "foto" %>   
+                                    <%= file_field_tag :foto ,class:'form-control'%>
+                                    </div> 
+                                    <%= submit_tag "Next",class:'btn btn-primary btn-lg'%>   
+                              <% end %>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                 <%= image_tag  "profile.svg" %>
+            </div>
+      </div>
+</div>
+
+  </body>
+</html>
+

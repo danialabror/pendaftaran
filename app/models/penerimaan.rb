@@ -1,0 +1,2 @@
+class Penerimaan < ApplicationRecord
+end

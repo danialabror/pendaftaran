@@ -1,0 +1,2 @@
+class Ortu < ApplicationRecord
+end

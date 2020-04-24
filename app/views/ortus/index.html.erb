@@ -1,0 +1,130 @@
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div class="container">
+      <div class="row">
+            <div class="col-md-6">
+                  <div class="card mt-5 bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="card-body">
+                              <h4 class="card-title">Data Diri Orang Tua Siswa</h4> <hr>
+                              <%= form_tag({:controller => "ortus", :action => "store"}) do |f| %> 
+                              <br>
+                              <h5>Ayah</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :nama_a, "Nama Ayah" %>   
+                                            <%= text_field_tag :nama_a, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ttl_a, "Tempat Tanggal Lahir Ayah" %>   <br>
+                                        <%= text_field_tag :ttl_a, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pekerjaan_a, "pekerjaan Ayah" %>   <br>
+                                        <%= text_field_tag :pekerjaan_a, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pendidikan_a, "pendidikan Ayah" %>   <br>
+                                        <%= text_field_tag :pendidikan_a, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :kewarganegaraan_a, "kewarganegaraan Ayah" %>   <br>
+                                        <%= text_field_tag :kewarganegaraan_a, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :agama_a, "agama Ayah" %>   <br>
+                                        <%= select_tag :agama_a, options_for_select(['islam', 'kristen', 'hindu', 'buddha']),class:'form-control'  %>
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :telp_a, "telp Ayah" %>   <br>
+                                        <%= text_field_tag :telp_a, " ", class: 'form-control' %>         
+                                    </div>  <br><br>
+
+                                    <h5>Ibu</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :nama_i, "Nama Ibu" %>   
+                                            <%= text_field_tag :nama_i, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ttl_i, "Tempat Tanggal Lahir Ibu" %>   <br>
+                                        <%= text_field_tag :ttl_i, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pekerjaan_i, "pekerjaan Ibu" %>   <br>
+                                        <%= text_field_tag :pekerjaan_i, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pendidikan_i, "pendidikan Ibu" %>   <br>
+                                        <%= text_field_tag :pendidikan_i, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :kewarganegaraan_i, "kewarganegaraan Ibu" %>   <br>
+                                        <%= text_field_tag :kewarganegaraan_i, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :agama_i, "agama Ibu" %>   <br>
+                                        <%= select_tag :agama_i, options_for_select(['islam', 'kristen', 'hindu', 'buddha']),class:'form-control'  %>          
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :telp_i, "telp Ibu" %>   <br>
+                                        <%= text_field_tag :telp_i, " ", class: 'form-control' %>         
+                                    </div> <br><br>
+
+                                    <h5>Wali</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :nama_w, "Nama Wali" %>   
+                                            <%= text_field_tag :nama_w, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ttl_w, "Tempat Tanggal Lahir Wali" %>   <br>
+                                        <%= text_field_tag :ttl_w, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pekerjaan_w, "pekerjaan Wali" %>   <br>
+                                        <%= text_field_tag :pekerjaan_w, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pendidikan_w, "pendidikan Wali" %>   <br>
+                                        <%= text_field_tag :pendidikan_w, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :kewarganegaraan_w, "kewarganegaraan Wali" %>   <br>
+                                        <%= text_field_tag :kewarganegaraan_w, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :agama_w, "agama Wali" %>   <br>
+                                        <%= select_tag :agama_w, options_for_select(['islam', 'kristen', 'hindu', 'buddha']),class:'form-control'  %>
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :telp_w, "telp Wali" %>   <br>
+                                        <%= text_field_tag :telp_w, " ", class: 'form-control' %>         
+                                    </div> 
+
+                                    <%= submit_tag "Next",class:'btn btn-primary btn-lg'%>   
+                              <% end %>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                  <br><br><br><br><br><br><br><br><br><br><br><br>
+                 <%= image_tag  "ortu.svg" %>
+            </div>
+      </div>
+</div>
+

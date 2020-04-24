@@ -1,0 +1,103 @@
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div class="container">
+      <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-5 bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                    <h5 class="card-header">Data Diri</h5>
+                    <div class="card-body">
+                        <h6>Pendaftaran jalur <%= @penerimaan.jalur %></h6><br>
+                        <h5>Biodata Siswa</h5> <hr>
+                        <p>Nama : <%= @user.nama_lengkap %></p>
+                        <p>Jenis Kelamin : <%= @user.jk %></p>
+                        <p>Tempat Tanggal Lahir : <%= @user.ttl %></p>
+                        <p>Agama : <%= @user.agama %></p>
+                        <p>Cita-cita : <%= @user.cita %></p>
+                        <p>Hobi : <%= @user.hoby %></p>
+                        <p>Berat Badan : <%= @user.berat %></p>
+                        <p>Tinggi Badan : <%= @user.tinggi %></p>
+                        <p>Golongan Darah : <%= @user.goldar %></p><br>
+
+                        <h5>Alamat Siswa</h5> <hr>
+                        <p>Alamat : kp.<%= @alamat.kp %> rt.<%= @alamat.rt %>/<%= @alamat.rw %> desa <%= @alamat.kelurahan %> kecamatan <%= @alamat.kecamatan %> kabupaten <%= @alamat.kotakabupaten %> provinsi <%= @alamat.provinsi %></p>
+                        <p>Telp. Rumah : <%= @alamat.telp_rumah %></p><br>
+
+                        <h5>Keterangan Kesehatan</h5> <hr>
+                        <p>tbc : <%= @kesehatan.tbc %></p>
+                        <p>chotipa : <%= @kesehatan.chotipa %></p>
+                        <p>malaria : <%= @kesehatan.malaria %></p>
+                        <p>cacar : <%= @kesehatan.cacar %></p>
+                        <p>lainnya : <%= @kesehatan.lainnya %></p>
+                        <p>kelainan jasmani : <%= @kesehatan.kelainan_jasmani %></p><br>
+
+                        <h5>Biodata Orang tua</h5> <hr>
+                        <p>Nama Ayah : <%= @ortu.nama_a %></p>
+                        <p>Tempat Tanggal Lahir Ayah : <%= @ortu.ttl_a %></p>
+                        <p>Pekerjaan Ayah : <%= @ortu.pekerjaan_a %></p>
+                        <p>Pendidikan Ayah : <%= @ortu.pendidikan_a %></p>
+                        <p>Kewarganegaraan Ayah : <%= @ortu.kewarganegaraan_a %></p>
+                        <p>Agama Ayah : <%= @ortu.agama_a %></p>
+                        <p>No.Telp Ayah : <%= @ortu.telp_a %></p><br>
+                        <p>Nama Ibu : <%= @ortu.nama_i %></p>
+                        <p>Tempat Tanggal Lahir Ibu : <%= @ortu.ttl_i %></p>
+                        <p>Pekerjaan Ibu : <%= @ortu.pekerjaan_i %></p>
+                        <p>Pendidikan Ibu : <%= @ortu.pendidikan_i %></p>
+                        <p>Kewarganegaraan Ibu : <%= @ortu.kewarganegaraan_i %></p>
+                        <p>Agama Ibu : <%= @ortu.agama_i %></p>
+                        <p>No.Telp Ibu : <%= @ortu.telp_i %></p><br>
+                        <p>Nama Wali : <%= @ortu.nama_w %></p>
+                        <p>Tempat Tanggal Lahir Wali : <%= @ortu.ttl_w %></p>
+                        <p>Pekerjaan Wali : <%= @ortu.pekerjaan_w %></p>
+                        <p>Pendidikan Wali : <%= @ortu.pendidikan_w %></p>
+                        <p>Kewarganegaraan Wali : <%= @ortu.kewarganegaraan_w %></p>
+                        <p>Agama Wali : <%= @ortu.agama_w %></p>
+                        <p>No.Telp Wali : <%= @ortu.telp_w %></p><br><br>
+
+                        <h5>Rapot Siswa</h5> <hr>
+                        <h6>PAI</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.pai_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.pai_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.pai_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.pai_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.pai_91 %></p> <br>
+                        <h6>Bahasa Indonesia</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.indo_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.indo_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.indo_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.indo_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.indo_91 %></p> <br>
+                        <h6>Bahasa Inggris</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.ing_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.ing_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.ing_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.ing_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.ing_91 %></p> <br>
+                        <h6>Matematika</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.mtk_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.mtk_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.mtk_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.mtk_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.mtk_91 %></p> <br>
+                        <h6>IPA</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.ipa_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.ipa_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.ipa_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.ipa_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.ipa_91 %></p> <br>
+                        <h6>IPS</h6>
+                        <p>tingkat 7 semester 1 : <%= @rapot.ips_71 %></p>
+                        <p>tingkat 7 semester 2 : <%= @rapot.ips_72 %></p>
+                        <p>tingkat 8 semester 1 : <%= @rapot.ips_81 %></p>
+                        <p>tingkat 8 semester 2 : <%= @rapot.ips_82 %></p>
+                        <p>tingkat 9 semester 1 : <%= @rapot.ips_91 %></p> <br>
+
+                        
+                        <%= link_to "Selesai",root_path, class:'btn btn-primary btn-lg'%>   
+                    </div>
+                </div>
+            </div>
+      </div>
+</div>

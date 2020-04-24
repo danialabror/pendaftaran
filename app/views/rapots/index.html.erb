@@ -1,0 +1,187 @@
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div class="container">
+      <div class="row">
+            <div class="col-md-6 ">
+                  <div class="card mt-5 bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="card-body">
+                              <h4 class="card-title">Data Diri Orang Tua Siswa</h4> <hr>
+                              <%= form_tag({:controller => "rapots", :action => "store"}) do |f| %>   
+                              <br>
+                              <h5>PAI</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :pai_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :pai_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :pai_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :pai_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pai_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :pai_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :pai_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :pai_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :pai_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :pai_91, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <br><br>
+
+                                    <h5>Bahasa Indonesia</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :indo_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :indo_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :indo_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :indo_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :indo_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :indo_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :indo_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :indo_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :indo_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :indo_91, " ", class: 'form-control' %>           
+                                    </div> 
+                                     <br><br>
+
+                                    <h5>Bahasa Ingrris</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :ing_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :ing_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ing_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :ing_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ing_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :ing_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ing_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :ing_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :ing_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :ing_91, " ", class: 'form-control' %>           
+                                    </div>  <br><br>
+
+                                    <h5>Matematika</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :mtk_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :mtk_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :mtk_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :mtk_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :mtk_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :mtk_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :mtk_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :mtk_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :mtk_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :mtk_91, " ", class: 'form-control' %>           
+                                    </div> <br> <br>
+
+                                    <h5>IPA</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :ipa_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :ipa_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ipa_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :ipa_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ipa_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :ipa_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ipa_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :ipa_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :ipa_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :ipa_91, " ", class: 'form-control' %>           
+                                    </div> <br><br>
+
+                                    <h5>IPS</h5> <hr>
+                                    <div class="form-group">
+                                            <%= label_tag :ips_71, "Tingkat 7 Semester 1" %>   
+                                            <%= number_field_tag :ips_71, " ", class: 'form-control' %>  
+                                    </div> 
+                                    <div class="form-group">
+                                        <%= label_tag :ips_72, "Tingkat 7 Semester 2" %>   <br>
+                                        <%= number_field_tag :ips_72, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ips_81, "Tingkat 8 Semester 1" %>   <br>
+                                        <%= number_field_tag :ips_81, " ", class: 'form-control' %>    
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <%= label_tag :ips_82, "Tingkat 8 Semester 2" %>   <br>
+                                        <%= number_field_tag :ips_82, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :ips_91, "Tingkat 9 Semester 1" %>   <br>
+                                        <%= number_field_tag :ips_91, " ", class: 'form-control' %>           
+                                    </div> <br>
+
+                                     <div class="form-group">
+                                       <%= label_tag :prestasi, "Prestasi yang diraih" %>   <br>
+                                        <%= text_field_tag :prestasi, " ", class: 'form-control' %>           
+                                    </div> 
+
+                                    <div class="form-group">
+                                       <%= label_tag :info, "Informasi SMK Wikrama ! Garut Dari:" %>   
+                                        <%= select_tag :info, options_for_select(['keluarga', 'teman', 'website', 'brosur', 'Sekolah SMP', 'Social Media', 'Guru/Staff', 'Lainnya']),class:'form-control'  %>
+                                    </div> 
+
+                                    <%= submit_tag "Next",class:'btn btn-primary btn-lg'%>   
+                              <% end %>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                  <br><br><br><br><br><br><br><br><br><br><br><br>
+                 <%= image_tag  "rapot.svg" %>
+            </div>
+      </div>
+</div>

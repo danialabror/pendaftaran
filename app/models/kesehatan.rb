@@ -1,0 +1,2 @@
+class Kesehatan < ApplicationRecord
+end

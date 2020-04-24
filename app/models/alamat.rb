@@ -1,0 +1,2 @@
+class Alamat < ApplicationRecord
+end

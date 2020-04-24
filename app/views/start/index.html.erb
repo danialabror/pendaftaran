@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+            <%# <link rel="stylesheet" href="assets/css/bootstrap.min.css"> %>
+            <%= stylesheet_link_tag 'bootstrap.min', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/owl.carousel.min.css"> %>
+            <%= stylesheet_link_tag 'owl.carousel.min', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/flaticon.css"> %>
+            <%= stylesheet_link_tag 'flaticon', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/slicknav.css"> %>
+            <%= stylesheet_link_tag 'slicknav', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/animate.min.css"> %>
+            <%= stylesheet_link_tag 'animate.min', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/magnific-popup.css"> %>
+            <%= stylesheet_link_tag 'magnific-popup', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"> %>
+            <%= stylesheet_link_tag 'fontawesome-all.min', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/themify-icons.css"> %>
+            <%= stylesheet_link_tag 'themify-icons', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/slick.css"> %>
+            <%= stylesheet_link_tag 'slick', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/nice-select.css"> %>
+            <%= stylesheet_link_tag 'nice-select', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+            <%# <link rel="stylesheet" href="assets/css/style.css"> %>
+            <%= stylesheet_link_tag 'style', media: 'all.js', 'data-turbolinks-track': 'reload' %>
+        <style>
+            body{
+                background-image:url('/assets/background.jpg') ;
+                background-size:100%;
+                
+                background-repeat: no-repeat;
+                filte:blur(5px);
+                -webkot-filter:blur(5px);
+            }
+        </style>
+    </head>
+    <body>
+      <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInUp" data-delay=".4s"><h2>SMK</h2></span>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">WIKRAMA 1<br>GARUT</h1>
+                                    <p data-animation="fadeInUp" data-delay=".8s">“Ilmu yang amaliah, Amal yang ilmiah, Akhlakul karimah.”</p>
+                                    <!-- Slider btn -->
+                                   <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <%= link_to  "Daftar", step_1_path, class: 'btn btn-primary' %>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight" data-delay="1s">
+                                    <%= image_tag 'background.png' %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
+
+
